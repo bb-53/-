@@ -1,3 +1,9 @@
+# --- 簡易パスワード機能 ---
+password = st.text_input("パスワードを入力してください", type="password")
+if password != "msgplus":
+    st.warning("パスワードが違います")
+    st.stop()  # ここで処理を止める
+    
 import streamlit as st
 import pandas as pd
 import io
@@ -156,4 +162,5 @@ if uploaded_file is not None:
     except Exception as e:
 
         st.error("処理中にエラーが発生しました")
+
         st.write(e)
